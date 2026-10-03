@@ -167,16 +167,30 @@ Le **monitoring** joue le rôle d'un tableau de bord.
 
 La protection dépend de la ressource réellement saturée.
 
-- **Trop de requêtes HTTP** → rate limiting, quotas, cache ;
-- **Trop de connexions** → limites, timeouts, reverse proxy ;
-- **Requêtes coûteuses** → optimisation, cache, traitement asynchrone, quotas ;
-- **Bande passante saturée** → CDN, mitigation DDoS, filtrage en amont ;
-- **Serveur unique** → load balancing et haute disponibilité ;
-- **Endpoint précis** → protection spécifique de l'API ou de la fonctionnalité.
+Les principales familles sont :
+
+- **mitigation DDoS en amont / scrubbing** → filtrer les gros volumes avant l'origine ;
+- **CDN / cache / Anycast** → distribuer et absorber une partie du trafic ;
+- **WAF / bot management / challenges** → contrôler le trafic applicatif ;
+- **rate limiting / quotas** → limiter la fréquence et la quantité d'utilisation ;
+- **firewall / ACL / protections L4** → filtrer les flux réseau ;
+- **timeouts / connection limits / limites de taille** → empêcher une ressource de rester immobilisée trop longtemps ;
+- **reverse proxy / API Gateway** → placer une couche de contrôle devant les services ;
+- **load balancing / haute disponibilité / autoscaling** → répartir et absorber certaines charges ;
+- **cache / queues / traitement asynchrone / backpressure** → réduire la pression sur l'application et la base ;
+- **monitoring / IDS / IPS / SIEM / alerting** → détecter et corréler les anomalies ;
+- **isolation de l'origine / segmentation réseau** → empêcher certains contournements et limiter les effets ;
+- **plan de réponse / failover / reprise** → organiser la réaction lorsque les protections sont dépassées.
+
+### Détail complet
+
+Voir :
+
+**[DDoS — Méthodes de protection et de mitigation](./DDoS-PROTECTION-METHODS.md)**
 
 Architecture défensive typique :
 
-**Internet → CDN / DDoS Protection → WAF → Reverse Proxy → Application → Cache → Database**
+**Internet → DDoS/Edge → DNS/Anycast → CDN → WAF → Rate Limiting → Load Balancer → Reverse Proxy → Application → Cache/Queue → Database → Monitoring**
 
 L'objectif est la **défense en profondeur** : plusieurs contrôles plutôt qu'une seule protection.
 
