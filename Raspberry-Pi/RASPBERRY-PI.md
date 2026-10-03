@@ -2,11 +2,9 @@
 
 ## 1. Qu'est-ce que c'est ?
 
-Un **Raspberry Pi** est un petit ordinateur monocarte : ses principaux composants sont regroupés sur une seule petite carte.
+Un **Raspberry Pi** est un petit ordinateur monocarte. Il peut faire fonctionner Linux, installer des logiciels et exécuter des services réseau.
 
-Il peut faire fonctionner **Linux**, installer des logiciels et exécuter des services réseau.
-
-Analogie : c'est comme **un petit PC réduit à l'essentiel**.
+Analogie : **un petit PC réduit à l'essentiel**.
 
 Point important : **un Raspberry Pi n'est pas un outil de hacking en lui-même**.
 
@@ -14,44 +12,51 @@ Point important : **un Raspberry Pi n'est pas un outil de hacking en lui-même**
 
 On peut l'utiliser comme :
 
-- **serveur de laboratoire** ;
-- outil de **monitoring** (surveillance) ;
-- **honeypot** (leurre destiné à observer des tentatives) ;
-- serveur **DNS** ;
-- **VPN (Virtual Private Network, réseau privé virtuel)** ;
+- serveur de laboratoire ;
+- outil de monitoring (surveillance) ;
+- honeypot (leurre) ;
+- serveur DNS ;
+- VPN (Virtual Private Network) ;
 - plateforme d'automatisation ;
-- plateforme **IoT (Internet of Things, objets connectés)** ;
+- plateforme IoT (objets connectés) ;
 - petit serveur Docker.
 
-## 3. Mythes et rumeurs à déconstruire
+## 3. Mythes et rumeurs
 
 ### « Un Raspberry Pi est un appareil de hacking »
 
-**Faux.** C'est avant tout un ordinateur. Le matériel peut servir à de nombreux usages légitimes.
+**Faux.** C'est avant tout un ordinateur.
 
-### « Parce qu'il est petit, il est peu puissant et inutile »
+### « Parce qu'il est petit, il est inutile »
 
-**Faux.** Sa puissance est limitée par rapport à un PC moderne, mais elle peut être suffisante pour des services légers, de l'automatisation, du réseau ou un laboratoire.
+**Faux.** Sa puissance est limitée par rapport à un PC moderne, mais elle peut suffire pour des services légers, du réseau, de l'automatisation et des laboratoires.
 
 ### « Un Raspberry Pi peut pirater n'importe quel Wi-Fi »
 
-**Faux.** Les possibilités dépendent du matériel, des logiciels, de la configuration du réseau et des mécanismes de sécurité utilisés.
+**Faux.** Les possibilités dépendent du matériel, des logiciels, de la configuration et des mécanismes de sécurité utilisés.
 
 ### « On peut brancher un Raspberry Pi sur un réseau et tout voir »
 
-**Faux.** Ce qu'une machine peut observer dépend notamment de sa position dans le réseau, de sa configuration, du chiffrement et de l'architecture réseau.
-
-### « Un Raspberry Pi caché suffit à espionner une entreprise »
-
-**Pas automatiquement.** Il faut qu'il ait accès au réseau ou aux équipements concernés et que les contrôles de sécurité permettent cette activité.
+**Faux.** Ce qu'une machine peut observer dépend notamment de sa position dans le réseau, de sa configuration, du chiffrement et de l'architecture.
 
 ## 4. Le vrai sujet : le rôle de la machine
 
-**Matériel → système d'exploitation → logiciel → configuration → rôle.**
+**Matériel → système d'exploitation → logiciel → configuration → rôle**
 
 C'est cette chaîne qui explique ce que le Raspberry Pi peut réellement faire.
 
-## 5. Risques à surveiller
+## 5. Pendant la démonstration
+
+Chercher à identifier :
+
+1. Quel matériel est utilisé ?
+2. Quel système d'exploitation tourne dessus ?
+3. Quel logiciel ou service lui donne sa capacité ?
+4. À quel réseau ou équipement est-il connecté ?
+5. Quelles données peut-il réellement observer ou traiter ?
+6. Quelle condition rend la démonstration possible ?
+
+## 6. Risques à surveiller
 
 Comme tout ordinateur :
 
@@ -64,7 +69,7 @@ Comme tout ordinateur :
 
 Un **port réseau** peut être comparé à une porte. Une porte ouverte n'est pas forcément dangereuse, mais il faut savoir pourquoi elle est ouverte et qui peut l'utiliser.
 
-## 6. Comment le sécuriser ?
+## 7. Comment le sécuriser ?
 
 - identifiants solides ;
 - mises à jour ;
@@ -74,7 +79,7 @@ Un **port réseau** peut être comparé à une porte. Une porte ouverte n'est pa
 - limitation de l'exposition Internet ;
 - surveillance des connexions.
 
-## 7. Questions à poser
+## 8. Questions à poser
 
 1. Quel rôle joue le Raspberry Pi ?
 2. Quel logiciel lui donne cette capacité ?
