@@ -2,88 +2,93 @@
 
 ## 1. Qu'est-ce que c'est ?
 
-Un **Raspberry Pi** est un petit ordinateur monocarte : tous ses principaux composants sont regroupés sur une seule petite carte.
+Un **Raspberry Pi** est un petit ordinateur monocarte : ses principaux composants sont regroupés sur une seule petite carte.
 
-Il peut généralement faire fonctionner **Linux**, installer des logiciels et exécuter des services réseau.
+Il peut faire fonctionner **Linux**, installer des logiciels et exécuter des services réseau.
 
-Analogie simple : c'est comme **un petit PC réduit à l'essentiel**, que l'on peut utiliser comme serveur, ordinateur de laboratoire ou machine d'expérimentation.
+Analogie : c'est comme **un petit PC réduit à l'essentiel**.
 
-Point important : **un Raspberry Pi n'est pas un outil de hacking en lui-même**. C'est une plateforme. Ce sont les logiciels installés et l'usage qu'on en fait qui déterminent son rôle.
+Point important : **un Raspberry Pi n'est pas un outil de hacking en lui-même**.
 
 ## 2. Pourquoi est-il intéressant en cybersécurité ?
 
-Sa petite taille, sa faible consommation et son fonctionnement proche d'un ordinateur Linux le rendent pratique pour les laboratoires.
+On peut l'utiliser comme :
 
-On peut par exemple l'utiliser comme :
-
-- **serveur de laboratoire** : héberger un petit service pour faire des tests ;
-- **monitoring** (surveillance) : observer l'état d'un réseau ou d'un équipement ;
-- **honeypot** (leurre) : installer un faux service pour observer des tentatives de connexion ;
-- **DNS** (service qui transforme un nom comme example.com en adresse IP) ;
-- **VPN (Virtual Private Network, réseau privé virtuel)** : créer un tunnel sécurisé pour certains usages ;
-- machine d'automatisation ;
-- plateforme pour l'**IoT (Internet of Things, objets connectés)** ;
+- **serveur de laboratoire** ;
+- outil de **monitoring** (surveillance) ;
+- **honeypot** (leurre destiné à observer des tentatives) ;
+- serveur **DNS** (service qui traduit les noms de domaine en adresses IP) ;
+- **VPN (Virtual Private Network, réseau privé virtuel)** ;
+- plateforme d'automatisation ;
+- plateforme **IoT (Internet of Things, objets connectés)** ;
 - petit serveur Docker.
 
-## 3. Pourquoi un hacker pourrait-il aussi l'utiliser ?
+## 3. Mythes et rumeurs à déconstruire
 
-Parce qu'un Raspberry Pi peut exécuter beaucoup de logiciels Linux et peut être placé physiquement près d'un équipement ou d'un réseau.
+### « Un Raspberry Pi est un appareil de hacking »
 
-Mais il faut distinguer deux choses :
+**Faux.** C'est avant tout un ordinateur.
 
-**Le matériel** = le petit ordinateur.
+Dire « Raspberry Pi = hacking » revient à dire « ordinateur = piratage ». Le matériel peut servir à de nombreux usages légitimes.
 
-**Le logiciel** = ce qui lui donne une fonction particulière.
+### « Parce qu'il est petit, il est peu puissant et inutile »
 
-Analogie : un couteau de cuisine et un couteau de bricolage sont tous deux des outils ; leur usage dépend de ce qu'on leur demande de faire. Pour un Raspberry Pi, c'est encore plus clair : la carte n'est pas l'attaque.
+**Faux.** Sa puissance est limitée par rapport à un PC moderne, mais elle peut être largement suffisante pour des services légers, de l'automatisation, du réseau ou un laboratoire.
 
-## 4. Ce qu'il faut observer pendant la démonstration
+### « Un Raspberry Pi peut pirater n'importe quel Wi-Fi »
 
-Si l'expert présente un Raspberry Pi, demander :
+**Faux.** Les possibilités dépendent du matériel, des logiciels, de la configuration du réseau et surtout des mécanismes de sécurité utilisés.
 
-- Quel logiciel tourne dessus ?
-- Quel est son rôle dans le scénario ?
-- Est-il connecté au réseau ?
-- Est-il utilisé comme serveur, capteur, relais ou machine de test ?
-- Quelles données peut-il recevoir ou envoyer ?
-- Comment est-il protégé ?
+Avoir un ordinateur capable d'analyser un réseau ne signifie pas automatiquement pouvoir compromettre ce réseau.
 
-Cela permet de comprendre **le rôle réel de la machine**, plutôt que de penser que « Raspberry Pi = hacking ».
+### « On peut brancher un Raspberry Pi sur un réseau et tout voir »
+
+**Faux.** Ce qu'une machine peut observer dépend notamment de sa position dans le réseau, de sa configuration, du chiffrement et de l'architecture réseau.
+
+### « Un Raspberry Pi caché suffit à espionner une entreprise »
+
+**Pas automatiquement.** Il faut encore qu'il ait accès au réseau ou aux équipements concernés et que les contrôles de sécurité ne bloquent pas son activité.
+
+## 4. Le vrai sujet : le rôle de la machine
+
+**Matériel → système d'exploitation → logiciel → configuration → rôle.**
+
+C'est cette chaîne qui explique ce que le Raspberry Pi peut réellement faire.
+
+Analogie : un véhicule n'est pas « un véhicule de livraison » par nature. Il le devient lorsqu'on lui donne un rôle, un équipement et une mission.
 
 ## 5. Risques à surveiller
 
-Comme n'importe quel ordinateur, un Raspberry Pi peut être mal sécurisé.
-
-Quelques risques :
+Comme tout ordinateur :
 
 - mot de passe faible ;
-- service inutile exposé sur Internet ;
 - logiciel non mis à jour ;
-- ports réseau inutilement ouverts ;
+- service inutile exposé ;
+- ports inutilement ouverts ;
 - mauvaise configuration ;
 - accès physique non protégé.
 
-Un **port réseau** peut être comparé à une porte. Une porte ouverte n'est pas automatiquement dangereuse, mais il faut savoir pourquoi elle est ouverte et qui peut l'utiliser.
+Un **port réseau** peut être comparé à une porte. Une porte ouverte n'est pas forcément dangereuse, mais il faut savoir pourquoi elle est ouverte et qui peut l'utiliser.
 
 ## 6. Comment le sécuriser ?
 
-- utiliser des identifiants solides ;
-- maintenir le système et les logiciels à jour ;
-- limiter les services exposés ;
-- utiliser un pare-feu lorsque nécessaire ;
-- contrôler les accès ;
-- éviter d'exposer directement des services sensibles sur Internet ;
-- surveiller les connexions.
+- identifiants solides ;
+- mises à jour ;
+- services minimaux ;
+- contrôle des accès ;
+- pare-feu lorsque nécessaire ;
+- limitation de l'exposition Internet ;
+- surveillance des connexions.
 
 ## 7. Questions simples à poser à l'expert
 
-1. Quel rôle joue le Raspberry Pi dans cette démonstration ?
+1. Quel rôle joue le Raspberry Pi ?
 2. Quel logiciel lui donne cette capacité ?
-3. Est-ce un outil d'attaque ou simplement une plateforme ?
-4. Quelle donnée peut-il observer ou manipuler ?
-5. Quel serait le risque pour une entreprise ?
+3. Est-ce le matériel ou le logiciel qui est important ici ?
+4. Quelles données peut-il réellement observer ?
+5. Quelle condition rend cette démonstration possible ?
 6. Comment sécuriser cette machine ?
 
 ## Phrase prête à dire
 
-> « Le Raspberry Pi n'est pas magique : c'est un petit ordinateur. En cybersécurité, son intérêt vient surtout des logiciels qu'on installe dessus et du rôle qu'on lui donne. »
+> « Le Raspberry Pi n'est pas magique : c'est un petit ordinateur. Sa capacité en cybersécurité vient surtout des logiciels qu'on installe et du rôle qu'on lui donne. »
