@@ -1,5 +1,9 @@
 # LOIC — Fiche Live
 
+## Guide de commentaire LIVE
+
+Pour disposer de formulations prêtes à dire, de questions de secours, du cadre juridique et des points à ne pas surinterpréter : **[LOIC — Guide de commentaire LIVE](./LOIC-LIVE-COMMENTARY.md)**.
+
 ## 1. Qu'est-ce que LOIC ?
 
 **LOIC** signifie *Low Orbit Ion Cannon*. C'est un outil historique utilisé pour générer du trafic réseau vers une cible afin d'étudier ou de provoquer une dégradation de service.
