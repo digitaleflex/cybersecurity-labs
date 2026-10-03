@@ -231,3 +231,10 @@ L'objectif est la **défense en profondeur** : plusieurs contrôles plutôt qu'u
 > « Une attaque par déni de service ne cherche pas forcément à entrer dans le système. Elle peut simplement chercher à empêcher le service de fonctionner normalement. »
 
 **Lab : uniquement sur des systèmes autorisés et isolés.**
+
+
+---
+
+## Sources vérifiées
+
+Voir **[LOIC — Sources vérifiées](./SOURCES.md)**.
