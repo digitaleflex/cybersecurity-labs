@@ -9,6 +9,8 @@ Support de référence pour comprendre et commenter des démonstrations de cyber
 3. **Flipper Zero** — expérimentation NFC, RFID, radio, infrarouge et USB
 4. **Anonymous** — comprendre le collectif, ses revendications et les limites de l'attribution
 5. **Threat Actors** — ransomware, cybercriminalité, hacktivisme et attribution
+6. **Doxing** — exposition d'informations personnelles, risques et incidents récents sur les réseaux sociaux
+7. **Cyber Laws** — lois, responsabilités, infractions et sanctions qui encadrent les pratiques numériques
 
 ## Méthode universelle pour commenter
 
