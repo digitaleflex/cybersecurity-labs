@@ -47,4 +47,10 @@ Le but pendant le live n'est donc pas de retenir tous les termes techniques. Il 
 
 > Quelles sont les limites de cet outil ?
 
+### Question anti-hype
+
+> **Qu'est-ce qui a réellement été démontré ?**
+
+Une démonstration réussie ne signifie pas nécessairement qu'un système entier est compromis. Il faut distinguer la capacité précise montrée, les conditions nécessaires pour la reproduire et ses limites.
+
 Toutes les manipulations offensives doivent rester dans un environnement autorisé et isolé.
