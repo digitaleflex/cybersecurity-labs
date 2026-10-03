@@ -98,13 +98,21 @@ Pour les usages détaillés — NFC, RFID 125 kHz, Sub-GHz, infrarouge, GPIO, iB
 ## 6. Questions à poser
 
 1. Quelle technologie utilise-t-on ?
+> **Réponse :** Il faut identifier précisément la technologie radio, NFC, RFID, infrarouge, USB ou électronique utilisée avant d'évaluer ce que le Flipper peut faire.
 2. Est-ce une lecture, une transmission ou une émulation ?
+> **Réponse :** La démonstration peut consister à lire une information, transmettre un signal ou émuler un comportement, et ces opérations n'ont pas les mêmes implications de sécurité.
 3. Quel protocole est utilisé ?
+> **Réponse :** Le protocole définit notamment la manière dont les appareils communiquent et les mécanismes qui peuvent limiter la reproduction d'un signal.
 4. Y a-t-il une authentification ?
+> **Réponse :** Si une authentification robuste est présente, connaître ou reproduire un signal ne suffit généralement pas à obtenir un accès valide.
 5. Les données sont-elles chiffrées ?
+> **Réponse :** Le chiffrement peut empêcher qu'une information capturée soit directement exploitable, même si le signal lui-même peut être observé.
 6. Le résultat fonctionnerait-il sur un système moderne correctement sécurisé ?
+> **Réponse :** Pas nécessairement, car les systèmes modernes peuvent utiliser authentification, chiffrement, codes dynamiques ou protections anti-rejeu.
 7. Quelle condition rend la démonstration possible ?
+> **Réponse :** La démonstration dépend de la technologie utilisée, de ses protections, de l'accès physique et de la compatibilité du Flipper avec le système.
 8. **Qu'est-ce qui a réellement été démontré ?**
+> **Réponse :** Une démonstration réussie montre une capacité précise sur une technologie donnée et ne signifie pas que tout le système est compromis.
 
 ## Phrase prête à dire
 
