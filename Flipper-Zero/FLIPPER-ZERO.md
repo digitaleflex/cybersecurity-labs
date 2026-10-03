@@ -14,31 +14,25 @@ Mais il ne faut pas le présenter comme une « clé universelle de piratage ».
 
 **Faux.** Les systèmes automobiles modernes utilisent des mécanismes de sécurité variés. Le résultat dépend de la technologie, du protocole, de l'authentification et parfois de codes dynamiques.
 
-Une démonstration réussie sur un système donné ne signifie donc pas que toutes les voitures sont vulnérables de la même manière.
-
 ### « Le Flipper peut cloner n'importe quel badge »
 
 **Faux.** Certains systèmes RFID ou NFC sont simples à reproduire ; d'autres utilisent une authentification et/ou un chiffrement qui empêchent une simple copie.
 
-La technologie « RFID » ou « NFC » ne suffit pas à déterminer le niveau de sécurité.
-
 ### « Le Flipper peut voler n'importe quelle carte bancaire »
 
-**Faux.** Le fonctionnement d'un paiement sans contact moderne repose sur plusieurs mécanismes de sécurité. Lire certaines informations radio ne signifie pas pouvoir reproduire une transaction bancaire valide.
+**Faux.** Lire certaines informations radio ne signifie pas pouvoir reproduire une transaction bancaire valide.
 
 ### « Il suffit de capter un signal une fois pour pouvoir le réutiliser »
 
-**Pas toujours.** Certains systèmes utilisent des mécanismes où le code ou la valeur utilisée change au fil des utilisations.
-
-C'est notamment la différence entre un signal simple que l'on peut apprendre et un système utilisant des mécanismes anti-rejeu (**anti-replay**).
+**Pas toujours.** Certains systèmes utilisent des mécanismes où le code ou la valeur change au fil des utilisations. C'est notamment la différence entre un signal simple que l'on peut apprendre et un système utilisant des mécanismes anti-rejeu (**anti-replay**).
 
 ### « Le Flipper peut pirater un téléphone juste en passant à côté »
 
-**Faux.** La proximité radio ne donne pas automatiquement un accès au téléphone. Il faut qu'une technologie, un protocole et une faiblesse permettent réellement une interaction exploitable.
+**Faux.** La proximité radio ne donne pas automatiquement un accès au téléphone.
 
 ### « Le Flipper fait tout ce que font les hackers »
 
-**Faux.** C'est un outil spécialisé d'expérimentation. Un professionnel de la cybersécurité utilise également des ordinateurs, des systèmes d'analyse, des outils réseau, des environnements de test et beaucoup de connaissances.
+**Faux.** C'est un outil spécialisé d'expérimentation. Un professionnel utilise également des ordinateurs, des systèmes d'analyse, des outils réseau et des environnements de test.
 
 ### « Si le Flipper réussit une démonstration, le système est forcément totalement compromis »
 
@@ -50,9 +44,7 @@ Il faut demander : **qu'est-ce qui a réellement été démontré ?**
 
 **NFC (Near Field Communication, communication en champ proche)** permet à des appareils proches d'échanger certaines informations.
 
-Analogie : deux appareils qui ne peuvent « se parler » que lorsqu'ils sont très proches.
-
-Il faut distinguer lecture, communication et **émulation** (faire apparaître l'appareil comme un dispositif compatible).
+Il faut distinguer **lecture**, communication et **émulation** (faire apparaître l'appareil comme un dispositif compatible).
 
 ## 4. RFID
 
@@ -68,8 +60,6 @@ Tous les badges RFID ne sont pas équivalents : certains sont très simples, d'a
 
 La fréquence seule ne suffit pas à comprendre la sécurité.
 
-Analogie : connaître la fréquence d'une radio ne signifie pas connaître la langue parlée sur cette radio.
-
 ## 6. Infrarouge
 
 Le signal **IR (infrarouge)** est utilisé par de nombreuses télécommandes.
@@ -80,15 +70,11 @@ Une télécommande envoie une séquence lumineuse invisible à l'œil humain que
 
 **GPIO (General-Purpose Input/Output)** désigne des broches électroniques permettant d'interagir avec des composants externes.
 
-Analogie : ce sont comme des « prises » permettant au dispositif de communiquer avec le monde physique.
-
 ## 8. BadUSB
 
 **BadUSB** désigne notamment l'utilisation d'un périphérique USB qui se présente à l'ordinateur comme un autre type de périphérique, par exemple un clavier.
 
 Le point de sécurité est la **confiance accordée aux périphériques physiques**.
-
-Cela ne signifie pas que n'importe quel ordinateur est automatiquement compromis dès qu'un appareil USB est branché : les protections du système et les politiques de sécurité comptent.
 
 ## 9. Le vrai sujet : protocole et authentification
 
@@ -107,9 +93,7 @@ Il faut donc demander :
 
 **Chiffrement** = rendre les données illisibles sans la bonne clé.
 
-Analogie : une serrure simple et une serrure avec une clé différente à chaque utilisation ne présentent pas le même niveau de protection.
-
-## 10. Questions simples à poser à l'expert
+## 10. Questions à poser
 
 1. Quelle technologie utilise-t-on ?
 2. Est-ce une lecture, une transmission ou une émulation ?
