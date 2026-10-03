@@ -2,124 +2,126 @@
 
 ## 1. Qu'est-ce que c'est ?
 
-Le **Flipper Zero** est un petit appareil portable conçu pour l'expérimentation électronique, radio et numérique.
+Le **Flipper Zero** est un appareil portable conçu pour l'expérimentation électronique, radio et numérique.
 
 Il peut interagir avec certaines technologies de communication à courte portée, certains signaux radio et certains appareils.
 
-Le point essentiel est le suivant :
+Mais il ne faut pas le présenter comme une « clé universelle de piratage ».
 
-> **Le Flipper Zero n'est pas une « clé magique » capable d'ouvrir ou de pirater n'importe quoi.**
+## 2. Mythes et rumeurs à déconstruire
 
-Ses capacités dépendent de la technologie utilisée, du protocole et surtout des mécanismes de sécurité présents.
+### « Le Flipper Zero peut ouvrir toutes les voitures »
 
-## 2. NFC
+**Faux.** Les systèmes automobiles modernes utilisent des mécanismes de sécurité variés. Le résultat dépend de la technologie, du protocole, de l'authentification et parfois de codes dynamiques.
 
-**NFC (Near Field Communication, communication en champ proche)** permet à deux appareils proches d'échanger certaines informations.
+Une démonstration réussie sur un système donné ne signifie donc pas que toutes les voitures sont vulnérables de la même manière.
 
-Exemple simple : le paiement sans contact ou certains systèmes de cartes.
+### « Le Flipper peut cloner n'importe quel badge »
 
-Analogie : imagine deux appareils qui se parlent uniquement lorsqu'ils sont presque côte à côte.
+**Faux.** Certains systèmes RFID ou NFC sont simples à reproduire ; d'autres utilisent une authentification et/ou un chiffrement qui empêchent une simple copie.
 
-Pendant une démonstration NFC, il faut distinguer :
+La technologie « RFID » ou « NFC » ne suffit pas à déterminer le niveau de sécurité.
 
-- lecture d'informations ;
-- communication avec une carte ou un appareil ;
-- émulation (faire apparaître l'appareil comme un autre dispositif compatible).
+### « Le Flipper peut voler n'importe quelle carte bancaire »
 
-La possibilité de reproduire quelque chose dépend de la technologie et de son authentification.
+**Faux.** Le fonctionnement d'un paiement sans contact moderne repose sur plusieurs mécanismes de sécurité. Lire certaines informations radio ne signifie pas pouvoir reproduire une transaction bancaire valide.
 
-## 3. RFID
+### « Il suffit de capter un signal une fois pour pouvoir le réutiliser »
+
+**Pas toujours.** Certains systèmes utilisent des mécanismes où le code ou la valeur utilisée change au fil des utilisations.
+
+C'est notamment la différence entre un signal simple que l'on peut apprendre et un système utilisant des mécanismes anti-rejeu (**anti-replay**).
+
+### « Le Flipper peut pirater un téléphone juste en passant à côté »
+
+**Faux.** La proximité radio ne donne pas automatiquement un accès au téléphone. Il faut qu'une technologie, un protocole et une faiblesse permettent réellement une interaction exploitable.
+
+### « Le Flipper fait tout ce que font les hackers »
+
+**Faux.** C'est un outil spécialisé d'expérimentation. Un professionnel de la cybersécurité utilise également des ordinateurs, des systèmes d'analyse, des outils réseau, des environnements de test et beaucoup de connaissances.
+
+### « Si le Flipper réussit une démonstration, le système est forcément totalement compromis »
+
+**Faux.** Une démonstration peut montrer une faiblesse précise sans signifier que tout le système est compromis.
+
+Il faut demander : **qu'est-ce qui a réellement été démontré ?**
+
+## 3. NFC
+
+**NFC (Near Field Communication, communication en champ proche)** permet à des appareils proches d'échanger certaines informations.
+
+Analogie : deux appareils qui ne peuvent « se parler » que lorsqu'ils sont très proches.
+
+Il faut distinguer lecture, communication et **émulation** (faire apparaître l'appareil comme un dispositif compatible).
+
+## 4. RFID
 
 **RFID (Radio-Frequency Identification, identification par radiofréquence)** permet d'identifier certains objets ou badges grâce aux ondes radio.
 
-Le **RFID 125 kHz** correspond notamment à une famille de technologies basse fréquence.
+Le **RFID 125 kHz** correspond à une famille de technologies basse fréquence.
 
-Analogie : c'est comme un badge qui « répond » lorsqu'un lecteur lui parle avec des ondes radio.
+Tous les badges RFID ne sont pas équivalents : certains sont très simples, d'autres utilisent des mécanismes de sécurité plus avancés.
 
-Attention : tous les badges RFID ne sont pas équivalents. Certains systèmes sont très simples ; d'autres utilisent des mécanismes d'authentification qui empêchent une simple copie.
+## 5. Sub-GHz
 
-## 4. Sub-GHz
+**Sub-GHz** signifie « sous 1 GHz ». Il s'agit de certaines communications radio utilisant des fréquences inférieures à 1 gigahertz.
 
-**Sub-GHz** signifie « sous 1 GHz » : il s'agit de certaines communications radio utilisant des fréquences inférieures à 1 gigahertz.
+La fréquence seule ne suffit pas à comprendre la sécurité.
 
-On peut rencontrer cette technologie dans certains appareils sans fil, télécommandes ou systèmes IoT.
+Analogie : connaître la fréquence d'une radio ne signifie pas connaître la langue parlée sur cette radio.
 
-Analogie : c'est comme une langue radio. Le fait de posséder un microphone ne signifie pas qu'on comprend toutes les langues : il faut connaître le protocole et le système utilisé.
+## 6. Infrarouge
 
-La fréquence seule ne suffit donc pas à déterminer ce qu'un appareil peut faire.
+Le signal **IR (infrarouge)** est utilisé par de nombreuses télécommandes.
 
-## 5. Infrarouge
+Une télécommande envoie une séquence lumineuse invisible à l'œil humain que le récepteur interprète.
 
-Le **signal infrarouge (IR)** est utilisé par de nombreuses télécommandes.
+## 7. GPIO
 
-Le principe est relativement simple : la télécommande envoie une séquence lumineuse invisible à l'œil humain et l'appareil la reconnaît.
+**GPIO (General-Purpose Input/Output)** désigne des broches électroniques permettant d'interagir avec des composants externes.
 
-Analogie : c'est un peu comme envoyer un message avec une lampe que seul le destinataire peut « voir ».
+Analogie : ce sont comme des « prises » permettant au dispositif de communiquer avec le monde physique.
 
-Le Flipper peut apprendre et reproduire certains signaux infrarouges compatibles.
+## 8. BadUSB
 
-## 6. GPIO
+**BadUSB** désigne notamment l'utilisation d'un périphérique USB qui se présente à l'ordinateur comme un autre type de périphérique, par exemple un clavier.
 
-**GPIO (General-Purpose Input/Output)** désigne des broches électroniques permettant à un ordinateur ou microcontrôleur d'interagir avec des composants externes.
+Le point de sécurité est la **confiance accordée aux périphériques physiques**.
 
-Cela permet de faire de l'expérimentation matérielle : capteurs, LED, boutons, circuits, etc.
+Cela ne signifie pas que n'importe quel ordinateur est automatiquement compromis dès qu'un appareil USB est branché : les protections du système et les politiques de sécurité comptent.
 
-Analogie : les GPIO sont comme des prises permettant au petit ordinateur de « toucher » le monde physique.
+## 9. Le vrai sujet : protocole et authentification
 
-## 7. BadUSB
-
-**BadUSB** désigne une technique où un périphérique USB se présente à l'ordinateur comme un autre type d'appareil, par exemple un clavier.
-
-Pourquoi est-ce intéressant en sécurité ?
-
-Parce qu'un ordinateur fait généralement confiance à un clavier USB pour envoyer des touches.
-
-Analogie : imagine quelqu'un qui entre dans un bâtiment avec un badge parfaitement reconnu par le gardien. Le problème n'est pas forcément le badge lui-même, mais le fait que le système lui fait confiance.
-
-C'est pourquoi la sécurité physique, le contrôle des périphériques USB et les politiques de poste de travail sont importants.
-
-## 8. Le point central : protocole et authentification
-
-Deux appareils peuvent utiliser la même famille de technologie tout en ayant des niveaux de sécurité très différents.
+Deux appareils utilisant la même famille de technologie peuvent avoir des niveaux de sécurité très différents.
 
 Il faut donc demander :
 
-- Quel protocole est utilisé ?
-- Les données sont-elles chiffrées ?
-- Y a-t-il une authentification ?
-- Le système utilise-t-il des codes qui changent ?
-- Est-ce une lecture, une émission ou une émulation ?
-- Quelle est la limite de la démonstration ?
+- Quel protocole ?
+- Authentification ?
+- Chiffrement ?
+- Code statique ou dynamique ?
+- Lecture, émission ou émulation ?
+- Quelle limite ?
 
-**Authentification** = mécanisme permettant de vérifier qu'un appareil ou utilisateur est bien autorisé.
+**Authentification** = vérifier qu'un appareil ou utilisateur est autorisé.
 
-**Chiffrement** = transformation des données pour qu'elles ne soient pas lisibles sans la bonne clé.
+**Chiffrement** = rendre les données illisibles sans la bonne clé.
 
-Analogie : une serrure simple peut être copiée plus facilement qu'une serrure associée à une clé différente à chaque utilisation.
-
-## 9. Ce qu'il faut observer pendant le live
-
-Ne vous concentrez pas uniquement sur « le Flipper fait quelque chose ».
-
-Essayez de comprendre :
-
-**Technologie → protocole → échange d'information → mécanisme de sécurité → résultat.**
-
-C'est cette chaîne qui explique pourquoi une démonstration fonctionne ou échoue.
+Analogie : une serrure simple et une serrure avec une clé différente à chaque utilisation ne présentent pas le même niveau de protection.
 
 ## 10. Questions simples à poser à l'expert
 
-1. Quelle technologie sommes-nous en train d'utiliser ?
+1. Quelle technologie utilise-t-on ?
 2. Est-ce une lecture, une transmission ou une émulation ?
 3. Quel protocole est utilisé ?
 4. Y a-t-il une authentification ?
 5. Les données sont-elles chiffrées ?
-6. Est-ce que le résultat fonctionnerait sur un système moderne correctement sécurisé ?
-7. Quelle est la limite de cette démonstration ?
-8. Comment protéger le système concerné ?
+6. Le résultat fonctionnerait-il sur un système moderne correctement sécurisé ?
+7. Qu'est-ce qui a réellement été démontré ?
+8. Quelle est la limite de la démonstration ?
 
 ## Phrase prête à dire
 
-> « Le plus important ici n'est pas de croire que le Flipper peut tout faire. Il faut regarder la technologie ciblée et surtout les mécanismes de sécurité qui déterminent ce qui est réellement possible. »
+> « Le Flipper n'est pas une baguette magique. Ce qu'il peut faire dépend surtout de la technologie ciblée et des mécanismes de sécurité utilisés. Une démonstration réussie montre une capacité précise, pas nécessairement une compromission complète du système. »
 
 Utilisation uniquement sur des systèmes, appareils et signaux autorisés.
