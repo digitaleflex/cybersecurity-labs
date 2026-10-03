@@ -1,0 +1,13 @@
+flowchart TD
+A[Action numérique] --> B{Autorisation ?}
+B -->|Oui| C[Périmètre défini]
+B -->|Non / incertain| Z[STOP : vérifier le cadre]
+C --> D{Données personnelles ?}
+D -->|Oui| E[Finalité + minimisation + protection]
+D -->|Non| F[Respect du périmètre]
+E --> G{Impact système ?}
+F --> G
+G -->|Faible / contrôlé| H[Documenter]
+G -->|Risque de perturbation| I[Limiter / tester en lab]
+H --> J[Rapport / restitution]
+I --> J
