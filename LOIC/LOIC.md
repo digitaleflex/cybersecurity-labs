@@ -47,31 +47,27 @@ LOIC est associé au **déni de service**, pas à une fonction magique permettan
 
 **Faux.** L'efficacité dépend de nombreux facteurs : capacité de la cible, protections en place, volume de trafic, architecture et nature du service.
 
-Un site correctement dimensionné et protégé peut absorber ou filtrer une partie importante du trafic.
-
 ### « DDoS = piratage du serveur »
 
 **Faux.** Une attaque DDoS vise principalement la **disponibilité**. Elle n'implique pas nécessairement une intrusion.
 
-Un attaquant peut chercher à empêcher les utilisateurs légitimes d'accéder à un service sans avoir obtenu les droits d'administration.
-
 ### « Plus on envoie de trafic, plus l'attaque est forcément efficace »
 
-**Pas nécessairement.** Le trafic doit rencontrer un véritable goulot d'étranglement. Une infrastructure peut répartir, filtrer ou absorber une partie de la charge.
+**Pas nécessairement.** Une infrastructure peut répartir, filtrer ou absorber une partie de la charge. Le véritable point déterminant est le **goulot d'étranglement**.
 
 ### « LOIC représente les DDoS modernes »
 
-**Non.** LOIC est surtout un outil historique et pédagogique pour comprendre certaines idées de génération de trafic. Les attaques modernes peuvent être beaucoup plus distribuées, automatisées et sophistiquées.
+**Non.** LOIC est surtout un outil historique et pédagogique. Les attaques modernes peuvent être beaucoup plus distribuées, automatisées et sophistiquées.
 
-## 5. Ce qu'il faut observer pendant la démonstration
+## 5. Ce qu'il faut observer
 
 **Trafic anormal → ressources sollicitées → ralentissement éventuel → utilisateurs impactés.**
 
-Le point important est de comprendre **quelle ressource devient le goulot d'étranglement** (le point qui limite la capacité globale).
+Demander : **quelle ressource devient le goulot d'étranglement ?**
 
-## 6. Comment un défenseur peut le détecter ?
+## 6. Détection
 
-On cherche des écarts par rapport au comportement habituel :
+Chercher des écarts par rapport au comportement habituel :
 
 - augmentation inhabituelle du trafic ;
 - grand nombre de connexions ;
@@ -80,9 +76,9 @@ On cherche des écarts par rapport au comportement habituel :
 - erreurs ou indisponibilité ;
 - comportement anormal provenant de certaines sources.
 
-Le **monitoring** (surveillance des systèmes) joue le rôle d'un tableau de bord.
+Le **monitoring** joue le rôle d'un tableau de bord.
 
-## 7. Comment se protéger ?
+## 7. Défense
 
 Selon le scénario :
 
@@ -95,7 +91,7 @@ Selon le scénario :
 - protection DDoS spécialisée ;
 - surveillance et plan de réponse à incident.
 
-## 8. Questions simples à poser à l'expert
+## 8. Questions à poser
 
 1. Qu'est-ce qu'on provoque exactement ?
 2. Quelle ressource est sollicitée ?
@@ -104,6 +100,7 @@ Selon le scénario :
 5. Quelle protection pourrait être ajoutée ?
 6. Est-ce encore représentatif des attaques modernes ?
 7. Quelle est la limite de cette démonstration ?
+8. **Qu'est-ce qui a réellement été démontré ?**
 
 ## Phrase prête à dire
 
