@@ -28,3 +28,10 @@ Les fiches couvrent quatre niveaux :
 ## Avertissement
 
 Ces documents sont pédagogiques et ne constituent pas un avis juridique. Une situation réelle doit être analysée selon la juridiction compétente, les faits, les textes en vigueur à la date concernée et, si nécessaire, avec un professionnel du droit.
+
+
+---
+
+## Sources vérifiées
+
+Voir **[Cyber Laws — Sources vérifiées](./SOURCES.md)** pour les textes officiels et références institutionnelles.
