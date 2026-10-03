@@ -63,12 +63,19 @@ C'est probablement le point le plus important pour commenter correctement le suj
 Pour une opération donnée, il faut demander :
 
 1. **Qui revendique l'action ?**
+> **Réponse :** Il faut identifier le compte, canal ou groupe qui revendique l'opération et ne pas confondre cette revendication avec une attribution définitive.
 2. **Quel compte ou quelle infrastructure est impliqué ?**
+> **Réponse :** Les comptes, domaines, serveurs ou autres infrastructures utilisés peuvent fournir des éléments de contexte, mais leur existence ne suffit pas à établir seule l'identité de l'opérateur.
 3. **Existe-t-il des éléments techniques reliant les acteurs ?**
+> **Réponse :** Une attribution plus solide repose sur plusieurs éléments techniques et contextuels qui relient de manière cohérente l'activité à un acteur.
 4. **L'action a-t-elle réellement eu lieu ?**
+> **Réponse :** Avant de discuter de l'auteur, il faut d'abord vérifier indépendamment que l'incident ou l'impact revendiqué a effectivement été observé.
 5. **La coordination est-elle démontrée ?**
+> **Réponse :** Des messages ou revendications similaires ne suffisent pas à prouver qu'un groupe centralisé a coordonné tous les participants.
 6. **Qui contrôlait réellement l'infrastructure ?**
+> **Réponse :** Identifier le contrôle effectif d'une infrastructure aide à distinguer un véritable lien opérationnel d'une simple utilisation ou revendication publique.
 7. **Existe-t-il une confirmation indépendante ?**
+> **Réponse :** Une confirmation provenant d'une source indépendante et crédible renforce fortement la distinction entre revendication publique et fait établi.
 
 Cela évite de transformer une revendication en fait établi.
 
