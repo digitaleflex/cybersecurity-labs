@@ -119,3 +119,10 @@ Pour les usages détaillés — NFC, RFID 125 kHz, Sub-GHz, infrarouge, GPIO, iB
 > « Le Flipper Zero est un outil d'expérimentation. Ses capacités dépendent énormément de la technologie ciblée et de ses mécanismes de sécurité. Une démonstration réussie montre une capacité précise, pas nécessairement une compromission complète du système. »
 
 Utilisation uniquement sur des systèmes, appareils et signaux autorisés.
+
+
+---
+
+## Sources vérifiées
+
+Voir **[Flipper Zero — Sources vérifiées](./SOURCES.md)** pour les références primaires, institutionnelles et techniques utilisées dans cette fiche.
