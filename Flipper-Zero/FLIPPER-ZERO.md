@@ -126,3 +126,10 @@ Utilisation uniquement sur des systèmes, appareils et signaux autorisés.
 ## Sources vérifiées
 
 Voir **[Flipper Zero — Sources vérifiées](./SOURCES.md)** pour les références primaires, institutionnelles et techniques utilisées dans cette fiche.
+
+
+---
+
+## Sources vérifiées
+
+Voir **[Flipper Zero — Sources vérifiées](./SOURCES.md)** pour les références utilisées dans cette fiche.
