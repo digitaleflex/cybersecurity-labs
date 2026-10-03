@@ -211,3 +211,10 @@ Une opération peut être revendiquée par un acteur sans que l'attribution soit
 - Australian Institute of Criminology — analyse des tactiques utilisées par de nombreux groupes ransomware. citeturn0search9
 
 **Usage : information, sensibilisation, recherche et défense. Ne pas reproduire d'actions offensives contre des systèmes non autorisés.**
+
+
+---
+
+## Sources vérifiées
+
+Voir **[Threat Actors — Sources vérifiées](./SOURCES.md)**.
