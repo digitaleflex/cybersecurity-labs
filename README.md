@@ -8,28 +8,34 @@ Support de référence pour comprendre et commenter des démonstrations de cyber
 2. **Raspberry Pi** — petit ordinateur et plateforme de laboratoire
 3. **Flipper Zero** — expérimentation NFC, RFID, radio, infrarouge et USB
 
-## Comment expliquer n'importe quel outil
+## Méthode universelle pour commenter
 
-Pour chaque démonstration, suivre cette logique :
+Pour chaque démonstration :
 
 - **WHAT?** — Qu'est-ce que c'est ?
 - **PURPOSE?** — À quoi ça sert ?
 - **HOW?** — Comment ça fonctionne, en termes simples ?
 - **IMPACT?** — Qu'est-ce que cela peut provoquer ?
-- **DETECTION?** — Comment un défenseur pourrait-il voir que cela se produit ?
+- **DETECTION?** — Comment un défenseur pourrait-il voir cela ?
 - **DEFENSE?** — Comment réduire ou empêcher le risque ?
+
+### La règle importante
+
+Ne pas confondre **outil**, **technique**, **vulnérabilité** et **compromission**.
+
+Un outil peut démontrer une capacité précise sans donner automatiquement le contrôle complet d'un système.
 
 ### Petite méthode pour débutant
 
 Imagine une maison :
 
 - le **réseau** ressemble aux routes qui permettent d'y accéder ;
-- un **serveur** ressemble à une personne ou une machine qui rend un service ;
-- une **connexion** ressemble à une conversation entre deux personnes ;
-- une **attaque** cherche souvent soit à entrer, soit à perturber le service, soit à exploiter une faiblesse ;
+- un **serveur** ressemble à une machine qui rend un service ;
+- une **connexion** ressemble à une conversation ;
+- une **attaque** cherche souvent à entrer, perturber un service ou exploiter une faiblesse ;
 - la **défense** consiste à surveiller, filtrer, limiter et protéger.
 
-Le but pendant le live n'est donc pas de retenir tous les termes techniques. Il faut surtout comprendre **ce que fait l'outil, ce qu'il touche et comment on s'en protège**.
+Le but pendant le live n'est donc pas de retenir tous les termes techniques. Il faut surtout comprendre **ce que fait l'outil, ce qu'il touche, dans quelles conditions il fonctionne et comment on s'en protège**.
 
 ## Questions de secours
 
@@ -37,7 +43,9 @@ Le but pendant le live n'est donc pas de retenir tous les termes techniques. Il 
 
 > Quel est le principe technique derrière cette démonstration ?
 
-> Quelle ressource est sollicitée ?
+> Quelle ressource ou quel système est sollicité ?
+
+> Quelle condition rend cette démonstration possible ?
 
 > Quel pourrait être l'impact pour une entreprise ?
 
