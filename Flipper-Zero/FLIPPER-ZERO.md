@@ -89,7 +89,13 @@ Pour chaque démonstration, demander :
 
 **Chiffrement** = rendre les données illisibles sans la bonne clé.
 
-## 5. Questions à poser
+## 5. Référence technique
+
+Pour les usages détaillés — NFC, RFID 125 kHz, Sub-GHz, infrarouge, GPIO, iButton, USB/Bad USB, U2F, limites et défenses :
+
+**[Flipper Zero — Usages cybersécurité et limites](./FLIPPER-ZERO-SECURITY-USES.md)**
+
+## 6. Questions à poser
 
 1. Quelle technologie utilise-t-on ?
 2. Est-ce une lecture, une transmission ou une émulation ?
