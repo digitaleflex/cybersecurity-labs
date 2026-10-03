@@ -2,9 +2,9 @@
 
 ## 1. Qu'est-ce que LOIC ?
 
-**LOIC** signifie *Low Orbit Ion Cannon*. C'est un outil historique utilisé pour générer beaucoup de trafic réseau vers une cible afin d'étudier ou de provoquer une dégradation de service.
+**LOIC** signifie *Low Orbit Ion Cannon*. C'est un outil historique utilisé pour générer du trafic réseau vers une cible afin d'étudier ou de provoquer une dégradation de service.
 
-On peut le voir comme **une foule qui essaierait d'entrer en même temps dans une petite boutique** : si le nombre de demandes devient trop important, les clients légitimes peuvent avoir du mal à accéder au service.
+Analogie : imaginez **une foule qui se présente en même temps devant une petite boutique**. Même si personne ne casse la boutique, le nombre de personnes peut empêcher les vrais clients d'entrer.
 
 LOIC est surtout intéressant aujourd'hui pour comprendre le principe d'une génération de trafic et l'histoire des outils de stress réseau. Il ne représente pas à lui seul toutes les techniques de **DDoS (Distributed Denial of Service, déni de service distribué)** modernes.
 
@@ -12,40 +12,64 @@ LOIC est surtout intéressant aujourd'hui pour comprendre le principe d'une gén
 
 **DoS (Denial of Service, déni de service)** : une ou plusieurs sources génèrent suffisamment de demandes pour perturber un service.
 
-**DDoS (Distributed Denial of Service)** : le trafic provient d'un grand nombre de machines ou de sources.
+**DDoS** : le trafic est distribué entre de nombreuses sources.
 
-Analogie simple :
+Analogie :
 
 - **DoS** = une personne bloque une porte.
 - **DDoS** = une foule arrive simultanément devant la porte.
 
-L'objectif principal est la **disponibilité** : faire en sorte que le service fonctionne mal ou ne soit plus accessible aux utilisateurs normaux.
+L'objectif principal est la **disponibilité** : faire fonctionner le service moins bien ou le rendre inaccessible.
 
 ## 3. Que se passe-t-il techniquement ?
 
-Une application ou un serveur possède des ressources limitées.
+Un serveur possède des ressources limitées.
 
 Le trafic peut solliciter :
 
-- la **bande passante** (quantité de données pouvant circuler) ;
-- les **connexions** (communications ouvertes avec les clients) ;
-- le **CPU** (processeur qui exécute les tâches) ;
-- la **RAM** (mémoire utilisée temporairement) ;
+- la **bande passante** (capacité de circulation des données) ;
+- les **connexions** ;
+- le **CPU** (processeur) ;
+- la **RAM** (mémoire temporaire) ;
 - les ressources de l'application ou de la base de données.
 
-Analogie : un serveur ressemble à un restaurant. Il a un nombre limité de serveurs, de tables et de cuisine. Si des centaines de commandes arrivent simultanément, le problème peut venir du nombre de commandes, même si la cuisine fonctionne normalement.
+Analogie : un restaurant possède un nombre limité de tables, de serveurs et de capacités en cuisine. Trop de commandes simultanées peuvent provoquer un ralentissement.
 
-## 4. Ce qu'il faut observer pendant la démonstration
+## 4. Mythes et rumeurs à déconstruire
 
-Regarder la chaîne suivante :
+### « LOIC permet de pirater un serveur »
 
-**Trafic anormal → ressources davantage sollicitées → ralentissement éventuel → utilisateurs impactés.**
+**Faux.** Générer du trafic et obtenir un accès au système sont deux choses différentes.
+
+LOIC est associé au **déni de service**, pas à une fonction magique permettant de prendre le contrôle d'un serveur.
+
+### « Un clic suffit pour faire tomber n'importe quel site »
+
+**Faux.** L'efficacité dépend de nombreux facteurs : capacité de la cible, protections en place, volume de trafic, architecture et nature du service.
+
+Un site correctement dimensionné et protégé peut absorber ou filtrer une partie importante du trafic.
+
+### « DDoS = piratage du serveur »
+
+**Faux.** Une attaque DDoS vise principalement la **disponibilité**. Elle n'implique pas nécessairement une intrusion.
+
+Un attaquant peut chercher à empêcher les utilisateurs légitimes d'accéder à un service sans avoir obtenu les droits d'administration.
+
+### « Plus on envoie de trafic, plus l'attaque est forcément efficace »
+
+**Pas nécessairement.** Le trafic doit rencontrer un véritable goulot d'étranglement. Une infrastructure peut répartir, filtrer ou absorber une partie de la charge.
+
+### « LOIC représente les DDoS modernes »
+
+**Non.** LOIC est surtout un outil historique et pédagogique pour comprendre certaines idées de génération de trafic. Les attaques modernes peuvent être beaucoup plus distribuées, automatisées et sophistiquées.
+
+## 5. Ce qu'il faut observer pendant la démonstration
+
+**Trafic anormal → ressources sollicitées → ralentissement éventuel → utilisateurs impactés.**
 
 Le point important est de comprendre **quelle ressource devient le goulot d'étranglement** (le point qui limite la capacité globale).
 
-Une attaque n'a donc pas forcément besoin de « casser » ou de pénétrer un serveur. Elle peut simplement chercher à empêcher le serveur de répondre normalement.
-
-## 5. Comment un défenseur peut le détecter ?
+## 6. Comment un défenseur peut le détecter ?
 
 On cherche des écarts par rapport au comportement habituel :
 
@@ -56,41 +80,33 @@ On cherche des écarts par rapport au comportement habituel :
 - erreurs ou indisponibilité ;
 - comportement anormal provenant de certaines sources.
 
-Le **monitoring** (surveillance des systèmes) joue ici le rôle d'un tableau de bord : il permet de voir qu'une voiture roule normalement puis, soudainement, qu'une route devient totalement saturée.
+Le **monitoring** (surveillance des systèmes) joue le rôle d'un tableau de bord.
 
-## 6. Comment se protéger ?
+## 7. Comment se protéger ?
 
-Selon le scénario, une organisation peut utiliser :
+Selon le scénario :
 
-- **Rate limiting** (limitation du nombre de requêtes par période) ;
+- **Rate limiting** (limitation du nombre de requêtes) ;
 - limites de connexions ;
 - pare-feu (**firewall**) ;
-- **WAF (Web Application Firewall, pare-feu spécialisé pour les applications web)** ;
-- **load balancing** (répartition des demandes entre plusieurs serveurs) ;
-- **CDN (Content Delivery Network, réseau de serveurs répartis géographiquement)** ;
-- services spécialisés de protection DDoS ;
+- **WAF (Web Application Firewall)** ;
+- **load balancing** (répartition des demandes) ;
+- **CDN (Content Delivery Network)** ;
+- protection DDoS spécialisée ;
 - surveillance et plan de réponse à incident.
-
-Analogie : au lieu de laisser tout le monde entrer directement dans le restaurant, on peut avoir une file d'attente, un contrôle à l'entrée et plusieurs serveurs pour répartir les clients.
-
-## 7. Ce qu'il faut retenir
-
-**LOIC montre surtout une idée : trop de demandes peuvent empêcher un service de répondre correctement.**
-
-Il faut aussi éviter une confusion : un outil de génération de trafic comme LOIC n'est pas représentatif de toutes les attaques DDoS modernes, qui peuvent utiliser de nombreuses machines, des réseaux de machines compromises ou des mécanismes de réflexion et d'amplification.
 
 ## 8. Questions simples à poser à l'expert
 
-1. Qu'est-ce qu'on est exactement en train de provoquer ?
-2. Quelle ressource du serveur est sollicitée ?
-3. Pourquoi le serveur commence-t-il à ralentir ?
-4. Comment un administrateur verrait-il cette anomalie ?
+1. Qu'est-ce qu'on provoque exactement ?
+2. Quelle ressource est sollicitée ?
+3. Pourquoi le serveur ralentit-il ?
+4. Comment un administrateur détecterait-il cela ?
 5. Quelle protection pourrait être ajoutée ?
-6. Est-ce que cette technique est encore représentative des attaques modernes ?
+6. Est-ce encore représentatif des attaques modernes ?
 7. Quelle est la limite de cette démonstration ?
 
 ## Phrase prête à dire
 
-> « Ici, l'objectif n'est pas forcément de pénétrer le serveur. On cherche surtout à perturber sa disponibilité en lui imposant une charge qu'il ne peut pas absorber correctement. »
+> « Une attaque par déni de service ne cherche pas forcément à entrer dans le système. Elle peut simplement chercher à empêcher le service de fonctionner normalement. »
 
 **Lab : uniquement sur des systèmes autorisés et isolés.**
