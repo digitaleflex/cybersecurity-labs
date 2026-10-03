@@ -213,3 +213,10 @@ Puis :
 - Mandiant / Google Cloud — infrastructure et coordination des campagnes hacktivistes récentes. citeturn0search11
 
 **Usage : analyse, formation et défense. Ne pas reproduire d'actions offensives contre des systèmes non autorisés.**
+
+
+---
+
+## Sources vérifiées
+
+Voir **[Hacktivist Tooling — Sources vérifiées](./SOURCES.md)**.
