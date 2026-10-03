@@ -1,12 +1,12 @@
 flowchart LR
 A[LOIC] --> B[Trafic généré]
 B --> C[Serveur cible]
-C --> D{Ressources}
+C --> D{Ressource sollicitée}
 D --> E[Bande passante]
 D --> F[Connexions]
 D --> G[CPU / RAM]
 D --> H[Application]
-C --> I[Dégradation]
-I --> J[Détection]
-J --> K[Rate limiting / Firewall / WAF / CDN]
-K --> L[Mitigation]
+C --> I[Dégradation éventuelle]
+I --> J[Monitoring / Détection]
+J --> K[Rate limiting / WAF / CDN / Mitigation]
+K --> L[Réduction de l'impact]
