@@ -66,6 +66,146 @@ Oui : des informations personnelles peuvent faciliter l'ingénierie sociale, l'u
 
 ---
 
+---
+
+# 8. Données récentes — enquêtes et incidents sur TikTok et les réseaux sociaux
+
+Cette section permet d'appuyer le live avec des données récentes. **Attention : ces chiffres ne mesurent pas tous le doxing directement.** Ils documentent des phénomènes voisins — exposition d'informations, harcèlement, sextorsion, arnaques et modération — qui montrent comment une information publiée sur un réseau social peut devenir un élément d'une chaîne de risque.
+
+## 8.1 TikTok — transparence européenne, janvier à juin 2026
+
+Dans son septième rapport de transparence DSA, publié le **31 août 2026**, TikTok indique avoir supprimé environ **104 millions de contenus** en Europe entre janvier et juin 2026 pour violation de ses règles. TikTok indique également que **94,1 %** des contenus supprimés ont été traités automatiquement sans revue humaine. [TikTok — DSA Transparency Report](https://newsroom.tiktok.com/en-eu/digital-services-act-our-seventh-transparency-report-on-content-moderation-in-europe)
+
+### Ce que cela permet de dire pendant le live
+
+> « Le volume de contenus problématiques sur une grande plateforme est considérable. Mais il faut distinguer le volume de modération d'un nombre d'incidents de doxing : ce chiffre ne signifie pas que 104 millions de cas de doxing ont été détectés. »
+
+---
+
+## 8.2 TikTok — enquête Ofcom ouverte en juillet 2026
+
+Le **16 juillet 2026**, le régulateur britannique Ofcom a ouvert une enquête sur TikTok afin d'examiner le respect de ses obligations de protection des enfants contre certains contenus préjudiciables et l'efficacité de ses mécanismes d'assurance de l'âge.
+
+Ofcom précise que l'ouverture de l'enquête **ne signifie pas qu'une violation a déjà été établie**. Le régulateur indique qu'il devait d'abord recueillir et analyser les éléments de preuve. [Ofcom — Investigation into TikTok](https://www.ofcom.org.uk/online-safety/protecting-children/investigation-into-tiktoks-compliance-with-duties-to-protect-children-from-encountering-harmful-content-under-section-12)
+
+### Question live
+
+> « Quand un régulateur ouvre une enquête sur une plateforme, est-ce déjà la preuve qu'elle a commis une infraction ? »
+
+### Réponse
+
+> « Non. Une enquête signifie qu'un régulateur cherche à établir les faits et à déterminer s'il existe un manquement aux obligations applicables. »
+
+---
+
+## 8.3 Sextorsion — données eSafety sur juillet à décembre 2025
+
+Un rapport de l'eSafety Commissioner couvrant les signalements reçus entre **juillet et décembre 2025** montre que **TikTok était le service le plus identifié par les moins de 18 ans comme point de contact initial avec l'auteur dans les signalements de sextorsion**, devant Instagram et Snapchat.
+
+Une autre étape pouvait ensuite se produire sur une autre plateforme. Pour les menaces de sextorsion signalées tous âges confondus, eSafety comptait notamment **596 signalements impliquant WhatsApp, 547 Telegram et 241 Instagram**. Les signalements peuvent mentionner plusieurs plateformes et ne constituent donc pas un comptage de victimes uniques. [eSafety — Periodic Notice Report 3](https://www.esafety.gov.au/industry/basic-online-safety-expectations/child-sexual-exploitation-and-abuse-material-and-activity/periodic-notice-report-3-snapshot)
+
+### Le point cyber à expliquer
+
+> « Un incident peut commencer sur TikTok et se déplacer ensuite vers une messagerie privée. Il faut donc raisonner en chaîne d'attaque et pas uniquement en plateforme. »
+
+### Question live
+
+> « Pourquoi un incident commencé sur un réseau social peut-il continuer sur une autre application ? »
+
+### Réponse
+
+> « Parce que les plateformes n'offrent pas les mêmes fonctions, niveaux de confidentialité, mécanismes de signalement ou possibilités de contact. »
+
+---
+
+## 8.4 Arnaques sur les réseaux sociaux — données FTC 2025 publiées en 2026
+
+Selon la Federal Trade Commission américaine, les consommateurs ont déclaré **2,1 milliards de dollars de pertes en 2025** dans des arnaques ayant commencé sur les réseaux sociaux. Près de **30 % des personnes ayant déclaré avoir perdu de l'argent dans une arnaque** ont indiqué que celle-ci avait commencé sur un réseau social.
+
+La FTC souligne également que les escrocs peuvent exploiter les informations publiées par les utilisateurs pour mieux cibler leurs victimes. [FTC — Social Media Scams, 2026](https://www.ftc.gov/news-events/news/press-releases/2026/04/new-ftc-data-show-people-have-lost-billions-social-media-scams)
+
+### Connexion avec le doxing
+
+Le mécanisme important est le suivant :
+
+**Information publiée → profilage → ciblage → manipulation → fraude ou autre préjudice**
+
+Cela ne signifie pas qu'une arnaque est automatiquement un doxing. Cela montre plutôt que les informations publiées sur les réseaux peuvent avoir une valeur opérationnelle pour un attaquant.
+
+### Question live
+
+> « Pourquoi une photo ou une publication anodine peut-elle intéresser un escroc ? »
+
+### Réponse
+
+> « Parce qu'elle peut révéler des habitudes, des centres d'intérêt, des relations ou d'autres éléments qui rendent une tentative de manipulation plus crédible. »
+
+---
+
+## 8.5 Ce que montrent les rapports récents
+
+On peut résumer les observations ainsi :
+
+| Observation | Ce que cela montre |
+|---|---|
+| TikTok publie des volumes très importants de modération | Les plateformes doivent gérer les abus à très grande échelle |
+| Ofcom enquête sur les mécanismes de protection des enfants de TikTok | La conformité et la prévention restent des sujets de contrôle |
+| TikTok apparaît comme point de contact initial dans les signalements de sextorsion concernant des mineurs | Un réseau social peut être le début d'une chaîne d'abus |
+| Les menaces peuvent migrer vers WhatsApp, Telegram ou Instagram | Un incident peut être multi-plateforme |
+| Les arnaques ayant commencé sur les réseaux sociaux ont représenté 2,1 Md$ de pertes déclarées aux États-Unis en 2025 | Les informations sociales peuvent faciliter le ciblage et la manipulation |
+| eSafety souligne que les recherches sur la prévalence du doxing restent limitées | Il faut éviter d'inventer un « taux mondial de doxing » à partir de données indirectes |
+
+---
+
+## 8.6 Attention à l'interprétation des chiffres
+
+Pour commenter correctement ces rapports :
+
+1. **Identifier l'organisme** : régulateur, autorité publique, entreprise, ONG ou enquête académique.
+2. **Identifier la période** : un chiffre de 2025 n'est pas automatiquement une mesure de 2026.
+3. **Identifier la population** : utilisateurs européens, signalements australiens, consommateurs américains, etc.
+4. **Identifier l'unité** : contenus supprimés, signalements, victimes, pertes financières ou enquêtes.
+5. **Ne pas transformer un indicateur en autre chose**.
+
+### Exemple
+
+> « 104 millions de contenus supprimés sur TikTok »
+
+ne signifie pas :
+
+> « 104 millions de victimes ».
+
+Et :
+
+> « 2,1 milliards de dollars de pertes déclarées dans des arnaques commencées sur les réseaux sociaux »
+
+ne signifie pas :
+
+> « 2,1 milliards de dollars causés par le doxing ».
+
+**Les chiffres doivent toujours être accompagnés de leur définition et de leur période.**
+
+---
+
+## 8.7 Question forte pour le live
+
+> **« Est-ce qu'on doit encore analyser un incident réseau social comme un problème isolé de plateforme, ou comme une chaîne qui peut passer de TikTok à une messagerie privée puis au monde réel ? »**
+
+### Réponse de secours
+
+> **« Les données récentes montrent qu'il faut souvent regarder la chaîne complète : exposition d'informations, premier contact, déplacement vers une autre plateforme, manipulation, menace ou fraude. Mais chaque incident doit être documenté séparément avant d'en tirer une conclusion. »**
+
+---
+
+## Sources récentes à conserver
+
+- [TikTok — Seventh DSA Transparency Report, 31 août 2026](https://newsroom.tiktok.com/en-eu/digital-services-act-our-seventh-transparency-report-on-content-moderation-in-europe)
+- [Ofcom — Investigation into TikTok, 16 juillet 2026](https://www.ofcom.org.uk/online-safety/protecting-children/investigation-into-tiktoks-compliance-with-duties-to-protect-children-from-encountering-harmful-content-under-section-12)
+- [eSafety Commissioner — Periodic Notice Report 3, données juillet-décembre 2025](https://www.esafety.gov.au/industry/basic-online-safety-expectations/child-sexual-exploitation-and-abuse-material-and-activity/periodic-notice-report-3-snapshot)
+- [FTC — Social Media Scams, données 2025 publiées en avril 2026](https://www.ftc.gov/news-events/news/press-releases/2026/04/new-ftc-data-show-people-have-lost-billions-social-media-scams)
+- [eSafety Commissioner — Doxing: trends and challenges, mise à jour 2025](https://www.esafety.gov.au/industry/tech-trends-and-challenges/doxing)
+
+
 # 8. Questions à poser pendant le live
 
 ### 1. « Est-ce que trouver une information publique sur quelqu'un constitue déjà du doxing ? »
