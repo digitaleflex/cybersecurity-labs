@@ -78,18 +78,205 @@ Chercher des écarts par rapport au comportement habituel :
 
 Le **monitoring** joue le rôle d'un tableau de bord.
 
-## 7. Défense
+## 7. Comment se protéger ? — scénarios pratiques
 
-Selon le scénario :
+Il n'existe pas une protection unique contre tous les DoS/DDoS. OWASP distingue notamment les attaques **application**, **session/protocole** et **réseau/volumétriques** : la défense dépend donc de la ressource réellement saturée. 
 
-- **Rate limiting** (limitation du nombre de requêtes) ;
-- limites de connexions ;
-- pare-feu (**firewall**) ;
-- **WAF (Web Application Firewall)** ;
-- **load balancing** (répartition des demandes) ;
-- **CDN (Content Delivery Network)** ;
-- protection DDoS spécialisée ;
-- surveillance et plan de réponse à incident.
+### Scénario A — Trop de requêtes HTTP vers une page ou une API
+
+**Problème :** l'application reçoit trop de requêtes et consomme CPU, RAM ou workers.
+
+**Protection : Rate limiting**
+
+On limite le nombre de requêtes par IP, session, compte, API key ou endpoint.
+
+**Exemple :**
+- page d'accueil : limite souple ;
+- /login : limite stricte ;
+- /api/search : limite par utilisateur/API key ;
+- génération de PDF : quota strict.
+
+Une API peut retourner **HTTP 429 — Too Many Requests** lorsqu'une limite est atteinte.
+
+> « Le but n'est pas de bloquer tout le trafic, mais d'empêcher un acteur de consommer toutes les ressources disponibles. »
+
+### Scénario B — Trop de connexions simultanées
+
+**Problème :** le serveur conserve trop de connexions ouvertes et manque de ressources.
+
+**Protections :**
+- limite de connexions ;
+- timeouts ;
+- limite par IP/utilisateur ;
+- fermeture des connexions inactives ;
+- reverse proxy/load balancer.
+
+**Exemple :** si un serveur dispose de 500 connexions disponibles mais qu'un grand nombre reste ouvert inutilement, les utilisateurs légitimes peuvent être refusés.
+
+Pour les WebSockets, on peut aussi limiter les connexions, la taille des messages, l'inactivité et le débit des messages.
+
+### Scénario C — Attaque HTTP lente
+
+Des connexions sont maintenues ouvertes très longtemps et consomment progressivement les ressources.
+
+**Protections :**
+- timeout ;
+- débit minimal acceptable ;
+- nombre maximal de connexions ;
+- reverse proxy ;
+- détection des connexions anormalement longues.
+
+> « Une connexion normale se termine rapidement. Une grande quantité de connexions anormalement longues est un signal à examiner. »
+
+### Scénario D — Une requête est très coûteuse
+
+Un DoS peut être efficace avec peu de trafic si chaque requête déclenche beaucoup de calcul.
+
+Exemples : recherche complexe, export massif, génération PDF, traitement d'image, requête SQL coûteuse.
+
+**Protections :**
+- quotas ;
+- pagination ;
+- cache ;
+- limites de taille ;
+- optimisation SQL ;
+- files de traitement asynchrones ;
+- limitation des opérations coûteuses.
+
+**Exemple :** au lieu de générer immédiatement un énorme PDF, l'application crée une tâche asynchrone et limite le nombre d'exports simultanés.
+
+### Scénario E — Saturation de la bande passante
+
+Ici, le lien Internet lui-même devient le goulot d'étranglement.
+
+Un rate limiting placé uniquement sur le serveur peut arriver trop tard : le trafic a déjà traversé le lien.
+
+**Protections :**
+- CDN ;
+- service de mitigation DDoS ;
+- filtrage en amont ;
+- capacité réseau adaptée ;
+- architecture distribuée.
+
+Un CDN correctement dimensionné peut absorber et distribuer une partie du trafic avant qu'il atteigne le serveur d'origine. citeturn0search25
+
+> « Si la route vers l'entreprise est déjà bouchée, renforcer uniquement le serveur à l'intérieur ne suffit pas. Il faut agir avant le bouchon. »
+
+### Scénario F — Un seul serveur porte toute l'application
+
+**Problème :** si cette machine tombe, tout le service tombe.
+
+**Protection : Load Balancing + haute disponibilité**
+
+Architecture :
+
+Utilisateur → Load Balancer → Serveur A / Serveur B / Serveur C
+
+Si A devient indisponible, le répartiteur peut continuer à envoyer les requêtes vers B et C.
+
+Cela réduit les **SPOF (Single Points of Failure)**, c'est-à-dire les composants uniques dont la panne suffit à interrompre le service.
+
+### Scénario G — Une fonctionnalité précise est ciblée
+
+Le trafic global peut sembler normal alors qu'un endpoint coûteux est surchargé.
+
+**Protections :**
+- WAF ;
+- rate limiting par endpoint ;
+- quotas ;
+- authentification renforcée pour les fonctions coûteuses ;
+- cache ;
+- limitation des opérations coûteuses.
+
+Exemple : /api/search peut recevoir une limite différente de /api/profile parce que les deux endpoints n'ont pas le même coût.
+
+### Scénario H — Le trafic vient de nombreuses sources
+
+Bloquer une seule IP ne suffit plus : c'est le principe du DDoS distribué.
+
+**Protections :**
+- CDN ;
+- mitigation DDoS spécialisée ;
+- filtrage en amont ;
+- analyse comportementale ;
+- coordination avec l'ISP/hébergeur ;
+- architecture distribuée.
+
+> « Une liste noire d'adresses IP n'est pas une stratégie complète contre un DDoS distribué. »
+
+## 8. Exemple d'architecture défensive
+
+Pour un site web :
+
+Internet → CDN / DDoS Protection → WAF → Reverse Proxy → Application → Cache → Database
+
+| Couche | Rôle |
+|---|---|
+| **CDN / DDoS** | Absorber ou filtrer une partie du trafic massif |
+| **WAF** | Filtrer des requêtes web suspectes |
+| **Reverse Proxy** | Contrôler les connexions et distribuer les requêtes |
+| **Rate limiting** | Limiter la consommation par client |
+| **Application** | Protéger les fonctions coûteuses |
+| **Cache** | Éviter de recalculer les mêmes données |
+| **Database** | Protéger les ressources et requêtes coûteuses |
+| **Monitoring** | Détecter les anomalies |
+
+L'objectif est la **défense en profondeur** : plusieurs contrôles indépendants plutôt qu'une seule protection. citeturn0search0turn0search1
+
+## 9. Quelle protection choisir ?
+
+La question centrale est :
+
+**Qu'est-ce qui est saturé ?**
+
+- **Bande passante** → CDN / mitigation DDoS / filtrage en amont.
+- **Connexions** → limites / timeouts / reverse proxy.
+- **CPU** → rate limiting / optimisation / cache.
+- **RAM** → limites de taille / connexions / ressources.
+- **Base de données** → cache / optimisation SQL / quotas / asynchronisme.
+- **Fonction précise** → protection de l'endpoint / quotas / WAF.
+
+## 10. Exemple concret pour le public
+
+### Sans protection
+
+1000 clients → serveur → base de données
+
+Une surcharge peut faire tomber le serveur ou la base.
+
+### Avec plusieurs couches
+
+1000 clients → CDN → WAF → Rate Limit → Load Balancer → Applications → Cache → Database
+
+Le but n'est pas de rendre le système impossible à attaquer.
+
+Le but est d'éviter qu'une surcharge provoque immédiatement une panne complète et de préserver les utilisateurs légitimes.
+
+## 11. Lorsqu'une attaque commence
+
+### 1. Détecter
+Surveiller trafic, latence, CPU, RAM, connexions, erreurs et disponibilité.
+
+### 2. Confirmer
+Comparer avec le comportement normal pour distinguer incident, pic légitime et attaque.
+
+### 3. Activer le plan de réponse
+Savoir qui intervient, qui contacte l'hébergeur/ISP et qui applique les mesures.
+
+### 4. Mitiger
+Selon le scénario : rate limiting, filtrage, WAF, CDN, mitigation DDoS, adaptation de capacité ou désactivation temporaire de fonctions non essentielles.
+
+### 5. Surveiller
+Vérifier que la mesure réduit l'impact sans bloquer les utilisateurs légitimes.
+
+### 6. Analyser après l'incident
+Conserver les logs, identifier le goulot d'étranglement et corriger l'architecture.
+
+CISA recommande notamment l'identification, l'activation du plan de réponse, la notification des fournisseurs, la collecte de preuves, le filtrage et l'activation de services de mitigation lorsque disponibles. citeturn0search24
+
+## 12. Phrase forte pour le live
+
+> « La bonne question n'est pas seulement : comment bloquer l'attaque ? C'est : quelle ressource l'attaque essaie-t-elle de saturer, et à quelle couche pouvons-nous arrêter le problème avant qu'il atteigne cette ressource ? »
 
 ## 8. Questions à poser
 
