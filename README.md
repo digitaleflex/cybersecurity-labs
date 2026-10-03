@@ -4,7 +4,7 @@ Support de référence pour comprendre et commenter des démonstrations de cyber
 
 ## Live — 03 octobre 2026
 
-1. **LOIC** — déni de service (DoS / DDoS)
+1. **LOIC** — déni de service (DoS / DDoS) — [fiche de commentaire LIVE](./LOIC/LOIC-LIVE-COMMENTARY.md)
 2. **Raspberry Pi** — petit ordinateur et plateforme de laboratoire
 3. **Flipper Zero** — expérimentation NFC, RFID, radio, infrarouge et USB
 4. **Anonymous** — comprendre le collectif, ses revendications et les limites de l'attribution
