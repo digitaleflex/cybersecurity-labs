@@ -141,6 +141,12 @@ C'est une excellente question parce qu'elle sépare **identité**, **revendicati
 - FBI / CISA — contexte sur l'utilisation du DDoS par les hacktivistes. citeturn1search3
 - Collection de recherche publique sur l'attribution des activités revendiquées sous le nom Anonymous. citeturn1search7
 
+## 11 bis. Référence technique approfondie
+
+Pour approfondir les tactiques, les outils, la coordination, l'attribution et l'analyse défensive :
+
+**[Anonymous et hacktivisme — Référence Live](./ANONYMOUS-SECURITY-REFERENCE.md)**
+
 ## 12. Règle de prudence
 
 **Ne pas présenter comme fait établi ce qui n'est qu'une revendication.**
