@@ -13,37 +13,44 @@ Point important : **un Raspberry Pi n'est pas un outil de hacking en lui-même**
 On peut l'utiliser comme :
 
 - serveur de laboratoire ;
-- outil de monitoring (surveillance) ;
-- honeypot (leurre) ;
-- serveur DNS ;
-- VPN (Virtual Private Network) ;
-- plateforme d'automatisation ;
-- plateforme IoT (objets connectés) ;
-- petit serveur Docker.
+- sonde de monitoring ;
+- honeypot ;
+- serveur DNS / DHCP ;
+- VPN ;
+- firewall ;
+- reverse proxy ;
+- bastion ;
+- plateforme Docker ;
+- IDS/IPS ;
+- collecteur de logs ;
+- plateforme IoT ;
+- plateforme d'automatisation.
 
-## 3. Mythes et rumeurs
+## 3. Le vrai sujet : le rôle de la machine
+
+**Matériel → système d'exploitation → logiciel → configuration → position réseau → rôle**
+
+C'est cette chaîne qui explique ce que le Raspberry Pi peut réellement faire.
+
+Un Raspberry Pi placé comme serveur n'a pas le même rôle qu'un Raspberry Pi utilisé comme sonde réseau, passerelle, honeypot ou plateforme IoT.
+
+## 4. Mythes et rumeurs
 
 ### « Un Raspberry Pi est un appareil de hacking »
 
 **Faux.** C'est avant tout un ordinateur.
 
-### « Parce qu'il est petit, il est inutile »
-
-**Faux.** Sa puissance est limitée par rapport à un PC moderne, mais elle peut suffire pour des services légers, du réseau, de l'automatisation et des laboratoires.
-
 ### « Un Raspberry Pi peut pirater n'importe quel Wi-Fi »
 
-**Faux.** Les possibilités dépendent du matériel, des logiciels, de la configuration et des mécanismes de sécurité utilisés.
+**Faux.** Les possibilités dépendent du matériel, des logiciels, des pilotes, de la configuration et des mécanismes de sécurité utilisés.
 
 ### « On peut brancher un Raspberry Pi sur un réseau et tout voir »
 
 **Faux.** Ce qu'une machine peut observer dépend notamment de sa position dans le réseau, de sa configuration, du chiffrement et de l'architecture.
 
-## 4. Le vrai sujet : le rôle de la machine
+### « Un Raspberry Pi est trop faible pour la cybersécurité »
 
-**Matériel → système d'exploitation → logiciel → configuration → rôle**
-
-C'est cette chaîne qui explique ce que le Raspberry Pi peut réellement faire.
+**Faux.** Il est très utile pour les petits services, les laboratoires, l'IoT, le monitoring et l'apprentissage. Ses ressources restent cependant limitées.
 
 ## 5. Pendant la démonstration
 
@@ -52,43 +59,77 @@ Chercher à identifier :
 1. Quel matériel est utilisé ?
 2. Quel système d'exploitation tourne dessus ?
 3. Quel logiciel ou service lui donne sa capacité ?
-4. À quel réseau ou équipement est-il connecté ?
-5. Quelles données peut-il réellement observer ou traiter ?
-6. Quelle condition rend la démonstration possible ?
+4. Quelle interface est utilisée ?
+5. À quel endroit du réseau est-il connecté ?
+6. Quelles données peut-il réellement observer ou traiter ?
+7. Quelle condition rend la démonstration possible ?
+8. Quelle est sa limite ?
+9. Comment un défenseur pourrait-il détecter ou bloquer cette activité ?
 
-## 6. Risques à surveiller
+## 6. Quelques rôles importants
+
+- **Honeypot** → système leurre pour observer des comportements suspects ;
+- **IDS** → détection d'activités suspectes ;
+- **IPS** → détection et blocage de certains flux ;
+- **DNS** → résolution de noms ;
+- **VPN** → tunnel réseau protégé ;
+- **Firewall** → filtrage de flux ;
+- **Reverse proxy** → contrôle devant une application ;
+- **Bastion** → point d'accès contrôlé ;
+- **Monitoring** → observation de l'état d'une infrastructure ;
+- **IoT** → interaction avec des objets et capteurs.
+
+## 7. Risques à surveiller
 
 Comme tout ordinateur :
 
 - mot de passe faible ;
 - logiciel non mis à jour ;
+- SSH exposé ;
 - service inutile exposé ;
 - ports inutilement ouverts ;
 - mauvaise configuration ;
+- privilèges excessifs ;
+- secrets mal stockés ;
 - accès physique non protégé.
 
 Un **port réseau** peut être comparé à une porte. Une porte ouverte n'est pas forcément dangereuse, mais il faut savoir pourquoi elle est ouverte et qui peut l'utiliser.
 
-## 7. Comment le sécuriser ?
+## 8. Comment le sécuriser ?
 
 - identifiants solides ;
+- clés SSH lorsque possible ;
 - mises à jour ;
 - services minimaux ;
+- moindre privilège ;
 - contrôle des accès ;
 - pare-feu lorsque nécessaire ;
 - limitation de l'exposition Internet ;
-- surveillance des connexions.
+- surveillance des connexions et logs ;
+- protection physique.
 
-## 8. Questions à poser
+## 9. Documentation technique complète
+
+Pour comprendre les usages et techniques de cybersécurité autour du Raspberry Pi :
+
+**[Raspberry Pi — Usages cybersécurité et techniques](./RASPBERRY-PI-SECURITY-USES.md)**
+
+La fiche détaille notamment Wireshark, tcpdump, Nmap, DNS, DHCP, VPN, WireGuard, firewall, reverse proxy, Docker, Prometheus, Grafana, SIEM, IDS/IPS, Suricata, Zeek, MQTT, IoT, GPIO, RFID/NFC, Bluetooth/BLE, hardening, segmentation réseau et cyber-range.
+
+## 10. Questions à poser
 
 1. Quel rôle joue le Raspberry Pi ?
 2. Quel logiciel lui donne cette capacité ?
 3. Est-ce le matériel ou le logiciel qui est important ici ?
-4. Quelles données peut-il réellement observer ?
-5. Quelle condition rend cette démonstration possible ?
-6. Comment sécuriser cette machine ?
-7. **Qu'est-ce qui a réellement été démontré ?**
+4. Quelle position occupe-t-il dans le réseau ?
+5. Quelles données peut-il réellement observer ?
+6. Quelle condition rend la démonstration possible ?
+7. Comment sécuriser cette machine ?
+8. Quelle est la limite de cette démonstration ?
+9. **Qu'est-ce qui a réellement été démontré ?**
 
 ## Phrase prête à dire
 
-> « Le Raspberry Pi n'est pas magique : c'est un petit ordinateur. Sa capacité en cybersécurité vient surtout des logiciels qu'on installe et du rôle qu'on lui donne. »
+> « Le Raspberry Pi n'est pas magique : c'est un petit ordinateur. Sa capacité en cybersécurité vient surtout des logiciels qu'on installe, de sa configuration et du rôle qu'on lui donne dans le réseau. »
+
+**Lab : uniquement sur des systèmes autorisés et isolés.**
