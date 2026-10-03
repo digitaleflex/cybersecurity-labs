@@ -163,3 +163,10 @@ Pour chaque opération :
 **Revendication → éléments techniques → corroboration indépendante → attribution éventuelle.**
 
 Utiliser ces informations uniquement dans un cadre d'analyse, d'éducation et de cybersécurité responsable.
+
+
+---
+
+## Sources vérifiées
+
+Voir **[Anonymous — Sources vérifiées](./SOURCES.md)**.
