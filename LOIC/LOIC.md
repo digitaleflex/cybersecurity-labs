@@ -206,13 +206,21 @@ L'objectif est la **défense en profondeur** : plusieurs contrôles plutôt qu'u
 ## 10. Questions à poser
 
 1. Qu'est-ce qu'on provoque exactement ?
+> **Réponse :** On provoque principalement une surcharge ou une dégradation de la disponibilité d'un service, sans obtenir automatiquement un accès au système.
 2. Quelle ressource est sollicitée ?
+> **Réponse :** Cela dépend du trafic et de l'architecture : la bande passante, les connexions, le CPU, la mémoire ou les ressources applicatives peuvent devenir le goulot d'étranglement.
 3. Pourquoi le serveur ralentit-il ?
+> **Réponse :** Il ralentit lorsque les demandes consomment une ressource limitée plus vite que l'infrastructure ne peut la traiter ou la filtrer.
 4. Comment un administrateur détecterait-il cela ?
+> **Réponse :** Il rechercherait notamment des anomalies de trafic, de connexions, de latence, d'erreurs et de consommation CPU ou mémoire par rapport au comportement normal.
 5. Quelle protection pourrait être ajoutée ?
+> **Réponse :** La protection peut combiner mitigation DDoS en amont, CDN, WAF, rate limiting, filtrage réseau, cache et surveillance selon la ressource attaquée.
 6. Est-ce encore représentatif des attaques modernes ?
+> **Réponse :** LOIC reste utile pour comprendre le principe, mais les DDoS modernes peuvent être beaucoup plus distribués, automatisés et structurés.
 7. Quelle est la limite de cette démonstration ?
+> **Réponse :** La principale limite est qu'une démonstration LOIC montre une génération de trafic et non la compromission complète d'un serveur.
 8. **Qu'est-ce qui a réellement été démontré ?**
+> **Réponse :** On a démontré qu'un volume de trafic peut solliciter un service dans certaines conditions, pas qu'une machine a été automatiquement piratée.
 
 ## Phrase prête à dire
 
