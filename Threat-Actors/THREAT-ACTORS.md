@@ -190,6 +190,7 @@ Tous ces acteurs ne fonctionnent pas de la même manière :
 ### La question à toujours poser
 
 > **« Qui est cet acteur, pourquoi agit-il, quelle capacité utilise-t-il, quel impact a-t-il réellement produit et qu'est-ce qui permet de confirmer son attribution ? »**
+> **Réponse :** Il faut croiser l'identité attribuée, la motivation documentée, les capacités observées, l'impact confirmé et les éléments techniques ou indépendants qui soutiennent l'attribution.
 
 ### Et surtout
 
