@@ -7,6 +7,7 @@ Support de référence pour comprendre et commenter des démonstrations de cyber
 1. **LOIC** — déni de service (DoS / DDoS)
 2. **Raspberry Pi** — petit ordinateur et plateforme de laboratoire
 3. **Flipper Zero** — expérimentation NFC, RFID, radio, infrarouge et USB
+4. **Anonymous** — comprendre le collectif, ses revendications et les limites de l'attribution
 
 ## Méthode universelle pour commenter
 
@@ -21,9 +22,13 @@ Pour chaque démonstration :
 
 ### La règle importante
 
-Ne pas confondre **outil**, **technique**, **vulnérabilité** et **compromission**.
+Ne pas confondre **outil**, **technique**, **vulnérabilité**, **revendication** et **compromission**.
 
 Un outil peut démontrer une capacité précise sans donner automatiquement le contrôle complet d'un système.
+
+Pour les groupes hacktivistes, il faut également distinguer :
+
+**revendication → affiliation → coordination → attribution.**
 
 ### Petite méthode pour débutant
 
@@ -55,10 +60,16 @@ Le but pendant le live n'est donc pas de retenir tous les termes techniques. Il 
 
 > Quelles sont les limites de cet outil ?
 
+### Pour une revendication Anonymous
+
+> **Qui revendique l'action et qu'est-ce qui permet de l'attribuer réellement ?**
+
+> **Parle-t-on d'une revendication Anonymous ou d'une coordination démontrée ?**
+
 ### Question anti-hype
 
 > **Qu'est-ce qui a réellement été démontré ?**
 
-Une démonstration réussie ne signifie pas nécessairement qu'un système entier est compromis. Il faut distinguer la capacité précise montrée, les conditions nécessaires pour la reproduire et ses limites.
+Une démonstration réussie ne signifie pas nécessairement qu'un système entier est compromis. Une revendication publique ne signifie pas non plus qu'une attribution est établie.
 
 Toutes les manipulations offensives doivent rester dans un environnement autorisé et isolé.
