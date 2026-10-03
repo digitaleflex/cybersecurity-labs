@@ -149,3 +149,10 @@ La fiche détaille notamment Wireshark, tcpdump, Nmap, DNS, DHCP, VPN, WireGuard
 ## Sources vérifiées
 
 Voir **[Raspberry Pi — Sources vérifiées](./SOURCES.md)** pour les références primaires, institutionnelles et techniques utilisées dans cette fiche.
+
+
+---
+
+## Sources vérifiées
+
+Voir **[Raspberry Pi — Sources vérifiées](./SOURCES.md)** pour les références utilisées dans cette fiche.
