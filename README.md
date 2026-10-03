@@ -8,6 +8,7 @@ Support de référence pour comprendre et commenter des démonstrations de cyber
 2. **Raspberry Pi** — petit ordinateur et plateforme de laboratoire
 3. **Flipper Zero** — expérimentation NFC, RFID, radio, infrarouge et USB
 4. **Anonymous** — comprendre le collectif, ses revendications et les limites de l'attribution
+5. **Threat Actors** — ransomware, cybercriminalité, hacktivisme et attribution
 
 ## Méthode universelle pour commenter
 
@@ -65,6 +66,10 @@ Le but pendant le live n'est donc pas de retenir tous les termes techniques. Il 
 > **Qui revendique l'action et qu'est-ce qui permet de l'attribuer réellement ?**
 
 > **Parle-t-on d'une revendication Anonymous ou d'une coordination démontrée ?**
+
+### Pour les groupes cyber
+
+> **Qui est réellement derrière ce nom, quelle est la motivation, et qu'est-ce qui est confirmé indépendamment ?**
 
 ### Question anti-hype
 
