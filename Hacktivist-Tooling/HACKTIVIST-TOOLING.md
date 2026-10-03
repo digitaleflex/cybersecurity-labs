@@ -196,10 +196,12 @@ Démontrer ou mettre en scène le résultat.
 ## 13. Question à poser à l'expert
 
 > **« Parmi ces outils, lesquels sont réellement utilisés aujourd'hui par les collectifs hacktivistes, et lesquels sont surtout devenus historiques ? »**
+> **Réponse :** LOIC et HOIC sont surtout historiques, tandis que des plateformes et infrastructures de coordination plus récentes comme DDoSia illustrent des modèles contemporains documentés.
 
 Puis :
 
 > **« Est-ce qu'aujourd'hui la différence se fait davantage sur l'outil lui-même ou sur l'infrastructure qui permet de coordonner des centaines ou milliers de participants ? »**
+> **Réponse :** Dans de nombreuses campagnes modernes, l'infrastructure de coordination, de distribution et de communication peut être aussi déterminante que l'outil d'action lui-même.
 
 ## Sources publiques
 
