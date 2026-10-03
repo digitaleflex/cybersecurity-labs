@@ -17,7 +17,7 @@ On peut l'utiliser comme :
 - **serveur de laboratoire** ;
 - outil de **monitoring** (surveillance) ;
 - **honeypot** (leurre destiné à observer des tentatives) ;
-- serveur **DNS** (service qui traduit les noms de domaine en adresses IP) ;
+- serveur **DNS** ;
 - **VPN (Virtual Private Network, réseau privé virtuel)** ;
 - plateforme d'automatisation ;
 - plateforme **IoT (Internet of Things, objets connectés)** ;
@@ -27,19 +27,15 @@ On peut l'utiliser comme :
 
 ### « Un Raspberry Pi est un appareil de hacking »
 
-**Faux.** C'est avant tout un ordinateur.
-
-Dire « Raspberry Pi = hacking » revient à dire « ordinateur = piratage ». Le matériel peut servir à de nombreux usages légitimes.
+**Faux.** C'est avant tout un ordinateur. Le matériel peut servir à de nombreux usages légitimes.
 
 ### « Parce qu'il est petit, il est peu puissant et inutile »
 
-**Faux.** Sa puissance est limitée par rapport à un PC moderne, mais elle peut être largement suffisante pour des services légers, de l'automatisation, du réseau ou un laboratoire.
+**Faux.** Sa puissance est limitée par rapport à un PC moderne, mais elle peut être suffisante pour des services légers, de l'automatisation, du réseau ou un laboratoire.
 
 ### « Un Raspberry Pi peut pirater n'importe quel Wi-Fi »
 
-**Faux.** Les possibilités dépendent du matériel, des logiciels, de la configuration du réseau et surtout des mécanismes de sécurité utilisés.
-
-Avoir un ordinateur capable d'analyser un réseau ne signifie pas automatiquement pouvoir compromettre ce réseau.
+**Faux.** Les possibilités dépendent du matériel, des logiciels, de la configuration du réseau et des mécanismes de sécurité utilisés.
 
 ### « On peut brancher un Raspberry Pi sur un réseau et tout voir »
 
@@ -47,15 +43,13 @@ Avoir un ordinateur capable d'analyser un réseau ne signifie pas automatiquemen
 
 ### « Un Raspberry Pi caché suffit à espionner une entreprise »
 
-**Pas automatiquement.** Il faut encore qu'il ait accès au réseau ou aux équipements concernés et que les contrôles de sécurité ne bloquent pas son activité.
+**Pas automatiquement.** Il faut qu'il ait accès au réseau ou aux équipements concernés et que les contrôles de sécurité permettent cette activité.
 
 ## 4. Le vrai sujet : le rôle de la machine
 
 **Matériel → système d'exploitation → logiciel → configuration → rôle.**
 
 C'est cette chaîne qui explique ce que le Raspberry Pi peut réellement faire.
-
-Analogie : un véhicule n'est pas « un véhicule de livraison » par nature. Il le devient lorsqu'on lui donne un rôle, un équipement et une mission.
 
 ## 5. Risques à surveiller
 
@@ -80,7 +74,7 @@ Un **port réseau** peut être comparé à une porte. Une porte ouverte n'est pa
 - limitation de l'exposition Internet ;
 - surveillance des connexions.
 
-## 7. Questions simples à poser à l'expert
+## 7. Questions à poser
 
 1. Quel rôle joue le Raspberry Pi ?
 2. Quel logiciel lui donne cette capacité ?
@@ -88,6 +82,7 @@ Un **port réseau** peut être comparé à une porte. Une porte ouverte n'est pa
 4. Quelles données peut-il réellement observer ?
 5. Quelle condition rend cette démonstration possible ?
 6. Comment sécuriser cette machine ?
+7. **Qu'est-ce qui a réellement été démontré ?**
 
 ## Phrase prête à dire
 
