@@ -329,3 +329,10 @@ CISA recommande notamment de conserver des captures et autres éléments de preu
 - FTC — *People Search Sites* : fonctionnement des sites qui agrègent et vendent des informations personnelles. citeturn0search2
 
 **Usage : sensibilisation, protection de la vie privée, recherche et cybersécurité défensive.**
+
+
+---
+
+## Sources vérifiées
+
+Voir **[Doxing — Sources vérifiées](./SOURCES.md)**.
