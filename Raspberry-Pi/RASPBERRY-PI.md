@@ -142,3 +142,10 @@ La fiche détaille notamment Wireshark, tcpdump, Nmap, DNS, DHCP, VPN, WireGuard
 > « Le Raspberry Pi n'est pas magique : c'est un petit ordinateur. Sa capacité en cybersécurité vient surtout des logiciels qu'on installe, de sa configuration et du rôle qu'on lui donne dans le réseau. »
 
 **Lab : uniquement sur des systèmes autorisés et isolés.**
+
+
+---
+
+## Sources vérifiées
+
+Voir **[Raspberry Pi — Sources vérifiées](./SOURCES.md)** pour les références primaires, institutionnelles et techniques utilisées dans cette fiche.
